@@ -566,11 +566,14 @@ function DesignCard({ card }: { card: (typeof cards)[number] }) {
       className="group block w-[285px] shrink-0 sm:w-[330px] lg:w-[360px]"
     >
       <div
-        className="relative aspect-[1.32/1] overflow-hidden border border-white/10 p-2 shadow-[0_20px_70px_rgba(0,0,0,0.28)] transition-transform duration-500 group-hover:-translate-y-2"
-        style={{ backgroundColor: colors.surface }}
+        className="relative aspect-[1.32/1] overflow-hidden rounded-[20px] border p-1.5 shadow-[0_22px_70px_rgba(0,0,0,0.32)] transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_30px_90px_rgba(0,0,0,0.42)]"
+        style={{
+          backgroundColor: colors.surface,
+          borderColor: `${colors.accent}55`,
+        }}
       >
         <div
-          className="relative h-full overflow-hidden rounded-[3px]"
+          className="relative h-full overflow-hidden rounded-[14px] border border-black/10"
           style={{ color: colors.text }}
         >
           <div
@@ -633,7 +636,7 @@ function DesignCard({ card }: { card: (typeof cards)[number] }) {
           </div>
         </div>
 
-        <span className="text-[9px] font-medium uppercase tracking-[0.16em] text-white/20">
+        <span className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 text-[8px] font-medium uppercase tracking-[0.14em] text-white/30 backdrop-blur-sm">
           Concept
         </span>
       </div>
