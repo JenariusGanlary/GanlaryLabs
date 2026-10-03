@@ -11,7 +11,7 @@ const links = [
   { label: "Contact", href: "/contact" },
 ];
 
-function BrandMark() {
+export function BrandMark() {
   return (
     <svg
       viewBox="0 0 42 42"
