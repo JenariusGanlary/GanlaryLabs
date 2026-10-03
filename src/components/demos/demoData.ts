@@ -1,4 +1,46 @@
-import type { DemoConfig } from "./BusinessDemo";
+export type DemoConfig = {
+  slug: string;
+  brand: string;
+  eyebrow: string;
+  heroTitle: string;
+  heroAccent: string;
+  heroBody: string;
+  primaryCta: string;
+  secondaryCta: string;
+  location: string;
+  palette: {
+    page: string;
+    ink: string;
+    muted: string;
+    accent: string;
+    accentSoft: string;
+    panel: string;
+    line: string;
+  };
+  heroImage: string;
+  introKicker: string;
+  introTitle: string;
+  introBody: string;
+  stats: Array<{
+    value: string;
+    label: string;
+  }>;
+  services: Array<{
+    number: string;
+    name: string;
+    description: string;
+  }>;
+  featureTitle: string;
+  featureBody: string;
+  featureImage: string;
+  featurePoints: string[];
+  gallery: string[];
+  closingTitle: string;
+  closingBody: string;
+  nav: string[];
+  footerNote: string;
+};
+
 const unsplash=(id:string)=>"https://images.unsplash.com/"+id+"?auto=format&fit=crop&w=1800&q=88";
 
 export const demos:Record<string,DemoConfig>={
