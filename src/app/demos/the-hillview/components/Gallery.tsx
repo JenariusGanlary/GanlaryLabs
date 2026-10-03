@@ -17,13 +17,13 @@ export default function Gallery() {
       {/* =====================================================
           HEADER
       ====================================================== */}
-      <div className="mx-auto max-w-[1500px] px-6 py-24 md:px-10 md:py-32 lg:px-14">
+      <div className="mx-auto max-w-[1500px] px-5 py-16 sm:px-6 sm:py-20 md:px-10 md:py-28 lg:px-14">
         <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
           <div>
             <div className="mb-6 flex items-center gap-3">
               <span className="h-px w-8 bg-[#c8aa7c]" />
 
-              <span className="text-[9px] uppercase tracking-[0.3em] text-[#c8aa7c]">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#c8aa7c]">
                 Gallery / 07
               </span>
             </div>
@@ -60,7 +60,7 @@ export default function Gallery() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.8 }}
-          className="group relative aspect-[16/8] min-h-[420px] overflow-hidden md:min-h-[560px]"
+          className="group relative aspect-[4/3] min-h-[340px] overflow-hidden sm:min-h-[420px] md:aspect-[16/8] md:min-h-[560px]"
         >
           <img
             src={featured.src}
@@ -70,13 +70,13 @@ export default function Gallery() {
 
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/5" />
 
-          <div className="absolute bottom-7 left-7 right-7 flex items-end justify-between md:bottom-9 md:left-9 md:right-9">
+          <div className="absolute bottom-5 left-5 right-5 sm:bottom-7 sm:left-7 sm:right-7 flex items-end justify-between md:bottom-9 md:left-9 md:right-9">
             <div>
               <div className="text-[8px] uppercase tracking-[0.25em] text-white/50">
                 {featured.category}
               </div>
 
-              <h3 className="mt-2 max-w-xl text-2xl font-light tracking-[-0.03em] text-white md:text-4xl">
+              <h3 className="mt-2 max-w-xl text-[26px] font-medium leading-[0.95] tracking-[-0.03em] text-white md:text-4xl">
                 A place designed around the landscape.
               </h3>
             </div>
@@ -93,8 +93,8 @@ export default function Gallery() {
       {/* =====================================================
           EDITORIAL GRID
       ====================================================== */}
-      <div className="mx-auto max-w-[1500px] px-6 py-5 md:px-10 md:py-6 lg:px-14">
-        <div className="grid gap-5 md:grid-cols-2">
+      <div className="mx-auto max-w-[1500px] px-5 py-4 sm:px-6 sm:py-5 md:px-10 md:py-6 lg:px-14">
+        <div className="grid gap-3 sm:gap-5 md:grid-cols-2">
           {secondary.map((image, index) => (
             <motion.article
               key={`${image.src}-${index}`}
@@ -144,7 +144,7 @@ export default function Gallery() {
           LOWER FEATURE STRIP
       ====================================================== */}
       {remaining.length > 0 && (
-        <div className="mx-auto max-w-[1500px] px-6 pb-24 pt-5 md:px-10 md:pb-32 lg:px-14">
+        <div className="mx-auto max-w-[1500px] px-5 pb-16 pt-3 sm:px-6 sm:pb-20 sm:pt-4 md:px-10 md:pb-28 lg:px-14">
           <div className="grid gap-5 lg:grid-cols-[1.15fr_0.85fr]">
             {remaining.map((image, index) => (
               <motion.article
@@ -158,8 +158,8 @@ export default function Gallery() {
                 }}
                 className={`group relative overflow-hidden ${
                   index === 0
-                    ? "aspect-[16/10] lg:aspect-[1.35/1]"
-                    : "aspect-[16/10] lg:aspect-[0.95/1]"
+                    ? "aspect-[4/3] sm:aspect-[16/10] lg:aspect-[1.35/1]"
+                    : "aspect-[4/3] sm:aspect-[16/10] lg:aspect-[0.95/1]"
                 }`}
               >
                 <img
