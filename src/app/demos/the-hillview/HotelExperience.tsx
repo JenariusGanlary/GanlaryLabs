@@ -6,7 +6,7 @@ import { rooms, experiences, dining, galleryImages, hillview, bookingOptions } f
 
 function PhonePreview() {
   return (
-    <div className="absolute right-[3%] top-[26%] z-20 hidden w-[178px] rotate-[2deg] rounded-[24px] border-[6px] border-[#20211e] bg-[#f4f0e7] p-[5px] shadow-[0_30px_70px_rgba(0,0,0,.45)] sm:block lg:w-[205px]">
+    <div className="absolute right-[6%] top-[23%] z-20 hidden w-[178px] lg:block rotate-[2deg] rounded-[24px] border-[6px] border-[#20211e] bg-[#f4f0e7] p-[5px] shadow-[0_30px_70px_rgba(0,0,0,.45)] lg:w-[205px]">
       <div className="overflow-hidden rounded-[17px] bg-[#f4f0e7]">
         <div className="flex items-center justify-between px-3 py-3 text-[6px] font-semibold uppercase tracking-[.12em]"><span>THE HILLVIEW</span><Menu size={10}/></div>
         <div className="relative aspect-[.72] overflow-hidden">
@@ -43,7 +43,7 @@ export default function HotelExperience() {
 
       <section id="top" className="relative min-h-[760px] overflow-hidden sm:min-h-[850px] lg:min-h-[900px]">
         <img src={hillview.heroImage} alt="The Hillview mountain retreat" className="absolute inset-0 h-full w-full object-cover"/>
-        <div className="absolute inset-0 bg-gradient-to-r from-black/55 via-black/20 to-black/5"/><div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/10"/>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/25 to-black/5"/><div className="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-black/10"/>
         <div className="relative mx-auto flex min-h-[760px] max-w-[1500px] flex-col justify-end px-5 pb-7 pt-32 text-white sm:min-h-[850px] sm:px-8 lg:min-h-[900px] lg:px-12 lg:pb-10">
           <div className="max-w-[650px]"><div className="flex items-center gap-2 text-[8px] uppercase tracking-[.18em] text-white/65"><span className="h-px w-6 bg-white/60"/>Luxury stay in the heart of nature</div><h1 className="mt-5 max-w-[620px] font-serif text-[clamp(4rem,8vw,7.6rem)] leading-[.82] tracking-[-.065em]">A More<br/><em className="font-normal">Considered Escape.</em></h1><p className="mt-6 max-w-md text-[11px] leading-5 text-white/70 sm:text-[13px]">A private mountain retreat surrounded by pine forests, quiet valleys, and the slower rhythm of the hills.</p></div>
           <div className="relative z-30 mt-8 max-w-[760px] overflow-hidden rounded-[3px] bg-white text-[#172019] shadow-2xl sm:mt-10"><div className="grid sm:grid-cols-[1fr_1fr_.8fr_auto]">
