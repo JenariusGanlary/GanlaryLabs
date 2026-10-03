@@ -76,7 +76,7 @@ export default function DemosPage() {
             </div>
 
             <span className="text-[10px] font-medium uppercase tracking-[0.16em] text-white/25">
-              {demos.length.toString().padStart(2, "0")} / 06 concepts
+              {demos.length.toString().padStart(2, "0")} / 07 concepts
             </span>
           </div>
 
