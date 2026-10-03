@@ -30,7 +30,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="desktop-only flex items-center gap-9">
+        <nav className="hidden items-center gap-9 lg:flex">
           {links.map((link) => (
             <a
               key={link.label}
@@ -54,7 +54,7 @@ export default function Navbar() {
         <button
           type="button"
           onClick={() => setOpen(!open)}
-          className="mobile-only flex h-10 w-10 items-center justify-center border border-[var(--border)]"
+          className="flex h-10 w-10 items-center justify-center border border-[var(--border)] lg:hidden"
           aria-label={open ? "Close menu" : "Open menu"}
         >
           {open ? <X size={18} /> : <Menu size={18} />}
@@ -63,7 +63,7 @@ export default function Navbar() {
 
       {/* Mobile Navigation */}
       {open && (
-        <div className="mobile-only border-t border-[var(--border)] bg-[var(--background)]">
+        <div className="border-t border-[var(--border)] bg-[var(--background)] lg:hidden">
           <nav className="site-container flex flex-col py-6">
             {links.map((link) => (
               <a
