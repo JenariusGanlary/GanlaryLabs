@@ -20,7 +20,7 @@ export const navigation = [
 ];
 
 export const heroImage =
-  "https://images.unsplash.com/photo-1744487793707-a28fe2071e93?auto=format&fit=crop&fm=jpg&q=90&w=3000";
+  "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=2600&q=90";
 
 /* =========================================================
    ROOMS
@@ -177,7 +177,7 @@ export const dining = {
   description:
     "Our kitchen follows the landscape around us — seasonal ingredients, local produce, familiar flavours, and meals meant to be enjoyed slowly.",
   image:
-    "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=2000&q=90",
+    "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=90",
   secondaryImage:
     "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=90",
   highlights: [
