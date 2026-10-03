@@ -20,13 +20,13 @@ export default function Footer() {
           FINAL RESERVATION CTA
       ====================================================== */}
       <div className="border-b border-white/10">
-        <div className="mx-auto max-w-[1500px] px-6 py-24 md:px-10 md:py-32 lg:px-14">
+        <div className="mx-auto max-w-[1500px] px-5 py-16 sm:px-6 sm:py-20 md:px-10 md:py-28 lg:px-14">
           <div className="grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
             <div>
               <div className="mb-7 flex items-center gap-3">
                 <span className="h-px w-8 bg-[#c8aa7c]" />
 
-                <span className="text-[9px] uppercase tracking-[0.3em] text-[#c8aa7c]">
+                <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#c8aa7c]">
                   Your stay / The Hillview
                 </span>
               </div>
@@ -47,7 +47,7 @@ export default function Footer() {
 
             <a
               href="#booking"
-              className="group flex w-fit items-center gap-4 bg-[#c8aa7c] px-7 py-5 text-[9px] uppercase tracking-[0.2em] text-[#171712] transition-all duration-300 hover:bg-[#e0c59b]"
+              className="group flex w-full items-center justify-center gap-4 bg-[#c8aa7c] sm:w-fit px-6 py-5 text-[10px] uppercase tracking-[0.2em] text-[#171712] transition-all duration-300 hover:bg-[#e0c59b]"
             >
               Check Availability
 
@@ -62,8 +62,8 @@ export default function Footer() {
       {/* =====================================================
           MAIN FOOTER
       ====================================================== */}
-      <div className="mx-auto max-w-[1500px] px-6 py-16 md:px-10 md:py-20 lg:px-14">
-        <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr_0.85fr_1fr]">
+      <div className="mx-auto max-w-[1500px] px-5 py-14 sm:px-6 md:px-10 md:py-20 lg:px-14">
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.15fr_0.85fr_0.85fr_1fr]">
           {/* Brand */}
           <div>
             <a
@@ -181,7 +181,7 @@ export default function Footer() {
       ====================================================== */}
       <div className="border-y border-white/10">
         <div className="mx-auto grid max-w-[1500px] md:grid-cols-3">
-          <div className="border-b border-white/10 px-6 py-6 md:border-b-0 md:border-r md:px-10 lg:px-14">
+          <div className="border-b border-white/10 px-5 py-5 sm:px-6 md:border-b-0 md:border-r md:px-10 lg:px-14">
             <div className="text-[8px] uppercase tracking-[0.2em] text-white/25">
               Check-in
             </div>
