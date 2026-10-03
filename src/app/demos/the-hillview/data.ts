@@ -228,7 +228,7 @@ export const galleryImages = [
     category: "Around The Property",
   },
   {
-    src: "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1800&q=90",
+    src: dining.image,
     alt: "Dining table prepared for dinner",
     category: "Dining",
   },
@@ -280,8 +280,7 @@ export const location = {
       value: "4,900 ft",
     },
   ],
-  image:
-    "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2200&q=90",
+  image: heroImage,
 };
 
 /* =========================================================
