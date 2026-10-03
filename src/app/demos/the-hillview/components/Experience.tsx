@@ -12,13 +12,13 @@ export default function Experience() {
       {/* =========================
           SECTION INTRO
       ========================== */}
-      <div className="mx-auto max-w-[1500px] px-6 py-24 md:px-10 md:py-32 lg:px-14">
+      <div className="mx-auto max-w-[1500px] px-5 py-16 sm:px-6 sm:py-20 md:px-10 md:py-28 lg:px-14 lg:py-32">
         <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:items-end">
           <div>
             <div className="mb-6 flex items-center gap-3">
               <span className="h-px w-8 bg-[#c8aa7c]" />
 
-              <span className="text-[9px] uppercase tracking-[0.3em] text-[#c8aa7c]">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#c8aa7c]">
                 Experiences / 05
               </span>
             </div>
@@ -61,7 +61,7 @@ export default function Experience() {
               >
                 {/* IMAGE */}
                 <div
-                  className={`relative min-h-[360px] overflow-hidden md:min-h-[500px] ${
+                  className={`relative aspect-[4/3] min-h-[300px] overflow-hidden sm:min-h-[380px] md:aspect-auto md:min-h-[500px] ${
                     isReversed ? "lg:order-2" : "lg:order-1"
                   }`}
                 >
@@ -92,7 +92,7 @@ export default function Experience() {
 
                 {/* CONTENT */}
                 <div
-                  className={`flex flex-col justify-between bg-[#171814] p-7 md:p-10 lg:p-14 ${
+                  className={`flex flex-col justify-between bg-[#171814] p-6 sm:p-7 md:p-10 lg:p-14 ${
                     isReversed ? "lg:order-1" : "lg:order-2"
                   }`}
                 >
@@ -103,17 +103,17 @@ export default function Experience() {
                       <span>Guest Activity</span>
                     </div>
 
-                    <h3 className="mt-8 max-w-lg text-[clamp(2.5rem,4vw,4.5rem)] font-light leading-[0.9] tracking-[-0.05em]">
+                    <h3 className="mt-6 max-w-lg sm:mt-8 text-[clamp(2.5rem,4vw,4.5rem)] font-light leading-[0.9] tracking-[-0.05em]">
                       {experience.title}
                     </h3>
 
-                    <p className="mt-7 max-w-lg text-sm leading-7 text-white/50 md:text-base">
+                    <p className="mt-5 max-w-lg sm:mt-7 text-sm leading-7 text-white/50 md:text-base">
                       {experience.description}
                     </p>
 
                     {/* EXPERIENCE META */}
-                    <div className="mt-10 grid max-w-lg grid-cols-2 border-y border-white/10">
-                      <div className="border-r border-white/10 py-5">
+                    <div className="mt-8 grid max-w-lg grid-cols-1 border-y border-white/10 sm:grid-cols-2 border-y border-white/10">
+                      <div className="border-b border-white/10 py-5 sm:border-b-0 sm:border-r">
                         <div className="flex items-center gap-2 text-[8px] uppercase tracking-[0.2em] text-white/30">
                           <Clock3 size={13} strokeWidth={1.2} />
                           Duration
@@ -124,7 +124,7 @@ export default function Experience() {
                         </div>
                       </div>
 
-                      <div className="py-5 pl-5">
+                      <div className="py-5 sm:pl-5">
                         <div className="flex items-center gap-2 text-[8px] uppercase tracking-[0.2em] text-white/30">
                           <MapPin size={13} strokeWidth={1.2} />
                           Location
@@ -138,7 +138,7 @@ export default function Experience() {
                   </div>
 
                   {/* CTA */}
-                  <div className="mt-12 border-t border-white/10 pt-6">
+                  <div className="mt-9 border-t border-white/10 pt-6">
                     <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
                       <div>
                         <div className="text-[8px] uppercase tracking-[0.2em] text-white/30">
@@ -152,7 +152,7 @@ export default function Experience() {
 
                       <a
                         href="#booking"
-                        className="flex w-fit items-center gap-3 border border-[#c8aa7c]/60 px-5 py-3.5 text-[9px] uppercase tracking-[0.18em] text-[#d8c19b] transition-all duration-300 hover:bg-[#c8aa7c] hover:text-[#171712]"
+                        className="flex w-full items-center justify-center gap-3 border border-[#c8aa7c]/60 px-5 py-3.5 sm:w-fit text-[9px] uppercase tracking-[0.18em] text-[#d8c19b] transition-all duration-300 hover:bg-[#c8aa7c] hover:text-[#171712]"
                       >
                         Arrange Experience
                         <ArrowUpRight
@@ -172,7 +172,7 @@ export default function Experience() {
       {/* =========================
           CLOSING NOTE
       ========================== */}
-      <div className="mx-auto max-w-[1500px] px-6 py-16 md:px-10 md:py-20 lg:px-14">
+      <div className="mx-auto max-w-[1500px] px-5 py-14 sm:px-6 md:px-10 md:py-20 lg:px-14">
         <div className="flex flex-col gap-5 border-t border-white/10 pt-6 md:flex-row md:items-center md:justify-between">
           <div className="text-[9px] uppercase tracking-[0.25em] text-white/35">
             Nothing is scheduled
