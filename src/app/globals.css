@@ -39,6 +39,11 @@ html {
   background: var(--background);
 }
 
+/* Keep anchored sections clear of the navigation when jumping from links. */
+[id] {
+  scroll-margin-top: 24px;
+}
+
 body {
   position: relative;
 
