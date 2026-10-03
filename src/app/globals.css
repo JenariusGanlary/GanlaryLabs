@@ -384,3 +384,98 @@ a {
     scroll-behavior: auto !important;
   }
 }
+
+/* ============================================================
+   DEMO MARQUEE
+============================================================ */
+
+.demo-marquee {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 7%,
+    black 93%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 7%,
+    black 93%,
+    transparent
+  );
+}
+
+.demo-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 20px;
+  will-change: transform;
+}
+
+.demo-marquee-left {
+  animation: demo-marquee-left 42s linear infinite;
+}
+
+.demo-marquee-right {
+  animation: demo-marquee-right 46s linear infinite;
+}
+
+@keyframes demo-marquee-left {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(calc(-50% - 10px), 0, 0);
+  }
+}
+
+@keyframes demo-marquee-right {
+  from {
+    transform: translate3d(calc(-50% - 10px), 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .demo-marquee-track {
+    gap: 14px;
+  }
+
+  .demo-marquee-left {
+    animation-duration: 34s;
+  }
+
+  .demo-marquee-right {
+    animation-duration: 38s;
+  }
+
+  .demo-marquee {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 4%,
+      black 96%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 4%,
+      black 96%,
+      transparent
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .demo-marquee-left,
+  .demo-marquee-right {
+    animation-play-state: paused;
+  }
+}
