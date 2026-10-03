@@ -38,7 +38,7 @@ export default function Hero() {
       ========================================================= */}
 
       <div className="site-container relative z-10 flex min-h-[inherit] items-center">
-        <div className="grid w-full items-center gap-16 py-24 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 lg:py-20">
+        <div className="grid w-full items-center gap-12 py-16 sm:py-20 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 lg:py-20">
           {/* ====================================================
               LEFT
           ===================================================== */}
@@ -74,7 +74,7 @@ export default function Hero() {
                 delay: 0.08,
                 ease,
               }}
-              className="max-w-[720px] text-[clamp(4rem,7vw,7.7rem)] font-medium leading-[0.84] tracking-[-0.075em] text-[var(--foreground)]"
+              className="max-w-[720px] text-[clamp(3.35rem,7vw,7.7rem)] font-medium leading-[0.84] tracking-[-0.075em] text-[var(--foreground)]"
             >
               We build
               <br />
@@ -99,7 +99,7 @@ export default function Hero() {
                 delay: 0.2,
                 ease,
               }}
-              className="mt-8 max-w-[610px] text-[15px] leading-7 text-[var(--muted)] sm:text-[16px]"
+              className="mt-7 max-w-[610px] text-[14px] leading-6 sm:mt-8 sm:text-[15px] sm:leading-7 text-[var(--muted)] sm:text-[16px]"
             >
               We design and engineer websites, AI-powered software,
               automation, and digital systems that turn complex
@@ -118,17 +118,17 @@ export default function Hero() {
                 delay: 0.3,
                 ease,
               }}
-              className="mt-9 flex flex-wrap items-center gap-3"
+              className="mt-8 flex w-full flex-col items-stretch gap-3 sm:mt-9 sm:w-auto sm:flex-row sm:flex-wrap sm:items-center"
             >
               {/* START A PROJECT */}
 
               <a
                 href="#contact"
-                className="group inline-flex h-14 items-center gap-5 rounded-full bg-[var(--foreground)] px-7 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--background)] transition-all duration-300 hover:bg-[var(--accent)] hover:text-white hover:shadow-[0_12px_45px_rgba(201,130,91,0.16)]"
+                className="group inline-flex h-14 w-full items-center justify-between gap-5 rounded-full bg-[var(--accent)] px-7 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--background)] transition-all duration-300 hover:bg-[var(--accent-soft)] hover:text-white hover:shadow-[0_14px_50px_rgba(201,130,91,0.22)]"
               >
                 <span>Start a Project</span>
 
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[var(--background)]/10 transition-transform duration-300 group-hover:translate-x-1">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-black/10 transition-transform duration-300 group-hover:translate-x-1">
                   <ArrowUpRight
                     size={14}
                     strokeWidth={1.6}
@@ -140,7 +140,7 @@ export default function Hero() {
 
               <a
                 href="#systems"
-                className="group inline-flex h-14 items-center gap-4 rounded-full border border-[var(--border)] px-7 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--foreground)] transition-all duration-300 hover:border-[rgba(201,130,91,0.45)] hover:bg-[rgba(201,130,91,0.045)]"
+                className="group inline-flex h-14 w-full items-center justify-between gap-4 rounded-full border border-[var(--border)] px-7 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--foreground)] transition-all duration-300 hover:border-[rgba(201,130,91,0.45)] hover:bg-[rgba(201,130,91,0.045)]"
               >
                 <span>Explore Systems</span>
 
@@ -164,7 +164,7 @@ export default function Hero() {
                 delay: 0.4,
                 ease,
               }}
-              className="mt-12 flex max-w-[650px] flex-wrap items-center gap-x-10 gap-y-5"
+              className="mt-10 grid max-w-[650px] grid-cols-2 gap-x-6 gap-y-6 sm:mt-12 sm:flex sm:flex-wrap sm:items-center sm:gap-x-10 sm:gap-y-5"
             >
               <HeroMeta
                 label="Focus"
@@ -195,7 +195,7 @@ export default function Hero() {
               delay: 0.18,
               ease,
             }}
-            className="relative z-10"
+            className="relative z-10 w-full lg:pl-2"
           >
             <SystemInterface />
           </motion.div>
@@ -213,7 +213,7 @@ export default function Hero() {
           duration: 0.8,
           delay: 0.8,
         }}
-        className="absolute bottom-7 left-0 right-0 z-20"
+        className="pointer-events-none absolute bottom-5 left-0 right-0 z-20 hidden sm:block"
       >
         <div className="site-container flex items-center justify-between">
           <span className="font-mono text-[7px] uppercase tracking-[0.18em] text-[var(--muted-dark)]">

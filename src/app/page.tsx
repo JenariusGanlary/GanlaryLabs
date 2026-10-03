@@ -1,5 +1,6 @@
 import Approach from "@/components/Approach";
 import CTA from "@/components/CTA";
+import Demos from "@/components/Demos";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import Industries from "@/components/Industries";
@@ -21,6 +22,8 @@ export default function Home() {
       <Process />
 
       <Industries />
+
+      <Demos />
 
       <CTA />
 

@@ -4,6 +4,8 @@ export const hillview = {
   location: "Arunachal Pradesh, India",
   category: "Boutique Mountain Retreat",
   tagline: "Stay above the clouds.",
+  heroImage:
+    "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=2600&q=90",
   description:
     "A private mountain retreat surrounded by pine forests, quiet valleys, and the slower rhythm of the hills.",
   address: "Upper Hills, Arunachal Pradesh, India",
@@ -20,7 +22,7 @@ export const navigation = [
 ];
 
 export const heroImage =
-  "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=2400&q=90";
+  "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=2600&q=90";
 
 /* =========================================================
    ROOMS
@@ -177,7 +179,7 @@ export const dining = {
   description:
     "Our kitchen follows the landscape around us — seasonal ingredients, local produce, familiar flavours, and meals meant to be enjoyed slowly.",
   image:
-    "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=2000&q=90",
+    "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=90",
   secondaryImage:
     "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1600&q=90",
   highlights: [
@@ -226,7 +228,7 @@ export const galleryImages = [
     category: "Around The Property",
   },
   {
-    src: "https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&w=1800&q=90",
+    src: dining.image,
     alt: "Dining table prepared for dinner",
     category: "Dining",
   },
@@ -278,8 +280,7 @@ export const location = {
       value: "4,900 ft",
     },
   ],
-  image:
-    "https://images.unsplash.com/photo-1500534623283-312aade485b7?auto=format&fit=crop&w=2200&q=90",
+  image: heroImage,
 };
 
 /* =========================================================

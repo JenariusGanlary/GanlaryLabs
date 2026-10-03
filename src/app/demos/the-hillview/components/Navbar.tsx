@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight, Menu, X } from "lucide-react";
 import { hillview, navigation } from "../data";
+import { BrandMark } from "@/components/Navbar";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -31,6 +32,17 @@ export default function Navbar() {
         }`}
       >
         <div className="mx-auto flex max-w-[1500px] items-center gap-6 px-6 md:px-10 lg:px-14">
+          <Link
+            href="/"
+            aria-label="Ganlary Labs home"
+            className="hidden shrink-0 items-center gap-2 text-white/80 transition-colors hover:text-white sm:flex"
+          >
+            <BrandMark />
+            <span className="hidden text-[9px] font-semibold uppercase tracking-[0.16em] md:block">
+              Ganlary Labs
+            </span>
+          </Link>
+
           {/* Demo collection */}
           <Link
             href="/demos"

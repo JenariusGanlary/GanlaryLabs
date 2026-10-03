@@ -51,13 +51,13 @@ export default function BookingCTA() {
       {/* =====================================================
           INTRO
       ====================================================== */}
-      <div className="mx-auto max-w-[1500px] px-6 py-24 md:px-10 md:py-32 lg:px-14">
+      <div className="mx-auto max-w-[1500px] px-5 py-16 sm:px-6 sm:py-20 md:px-10 md:py-28 lg:px-14">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
           <div>
             <div className="mb-6 flex items-center gap-3">
               <span className="h-px w-8 bg-[#c8aa7c]" />
 
-              <span className="text-[9px] uppercase tracking-[0.3em] text-[#c8aa7c]">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#c8aa7c]">
                 Reservations / 09
               </span>
             </div>
@@ -97,7 +97,7 @@ export default function BookingCTA() {
             <div className="border-b border-white/10 lg:border-b-0 lg:border-r">
               <div className="grid md:grid-cols-2">
                 {/* Check in */}
-                <label className="border-b border-white/10 p-6 md:border-r md:p-8">
+                <label className="border-b border-white/10 p-5 sm:p-6 md:border-r md:p-8">
                   <span className="mb-4 flex items-center gap-2 text-[8px] uppercase tracking-[0.22em] text-white/30">
                     <CalendarDays
                       size={14}
@@ -114,12 +114,12 @@ export default function BookingCTA() {
                       setCheckIn(event.target.value);
                       setSubmitted(false);
                     }}
-                    className="w-full bg-transparent text-sm text-white outline-none [color-scheme:dark]"
+                    className="w-full bg-transparent min-w-0 w-full bg-transparent text-sm text-white outline-none [color-scheme:dark]"
                   />
                 </label>
 
                 {/* Check out */}
-                <label className="border-b border-white/10 p-6 md:p-8">
+                <label className="border-b border-white/10 p-5 sm:p-6 md:p-8">
                   <span className="mb-4 flex items-center gap-2 text-[8px] uppercase tracking-[0.22em] text-white/30">
                     <CalendarDays
                       size={14}
@@ -221,7 +221,7 @@ export default function BookingCTA() {
                   type="button"
                   onClick={handleSubmit}
                   disabled={nights <= 0}
-                  className="flex w-full items-center justify-between gap-5 bg-[#c8aa7c] px-6 py-5 text-left text-[#171712] transition-all duration-300 hover:bg-[#e0c59b] disabled:cursor-not-allowed disabled:opacity-40"
+                  className="flex w-full items-center justify-between gap-5 bg-[#c8aa7c] px-5 py-5 text-left sm:px-6 text-[#171712] transition-all duration-300 hover:bg-[#e0c59b] disabled:cursor-not-allowed disabled:opacity-40"
                 >
                   <span>
                     <span className="block text-[9px] uppercase tracking-[0.2em]">
@@ -270,7 +270,7 @@ export default function BookingCTA() {
             </div>
 
             {/* SUMMARY */}
-            <div className="bg-[#1d1e19] p-7 md:p-10 lg:p-12">
+            <div className="bg-[#1d1e19] p-6 sm:p-7 md:p-10 lg:p-12">
               <div className="flex items-center justify-between border-b border-white/10 pb-5">
                 <span className="text-[9px] uppercase tracking-[0.22em] text-white/30">
                   Stay Summary
@@ -295,8 +295,8 @@ export default function BookingCTA() {
                 </div>
               </div>
 
-              <div className="mt-8 grid grid-cols-2 border-y border-white/10">
-                <div className="border-r border-white/10 py-5">
+              <div className="mt-7 grid grid-cols-1 sm:grid-cols-2 border-y border-white/10">
+                <div className="border-b border-white/10 py-5 sm:border-b-0 sm:border-r">
                   <div className="text-[8px] uppercase tracking-[0.2em] text-white/30">
                     Guests
                   </div>
@@ -306,7 +306,7 @@ export default function BookingCTA() {
                   </div>
                 </div>
 
-                <div className="py-5 pl-5">
+                <div className="py-5 sm:pl-5">
                   <div className="text-[8px] uppercase tracking-[0.2em] text-white/30">
                     Stay
                   </div>
@@ -373,7 +373,7 @@ export default function BookingCTA() {
       {/* =====================================================
           HOTEL INFORMATION
       ====================================================== */}
-      <div className="mx-auto max-w-[1500px] px-6 py-14 md:px-10 md:py-16 lg:px-14">
+      <div className="mx-auto max-w-[1500px] px-5 py-12 sm:px-6 md:px-10 md:py-16 lg:px-14">
         <div className="grid gap-8 md:grid-cols-3">
           <div className="border-t border-white/10 pt-5">
             <div className="text-[8px] uppercase tracking-[0.2em] text-white/30">
