@@ -37,13 +37,13 @@ export default function Location() {
       {/* =====================================================
           INTRO
       ====================================================== */}
-      <div className="mx-auto max-w-[1500px] px-6 py-24 md:px-10 md:py-32 lg:px-14">
+      <div className="mx-auto max-w-[1500px] px-5 py-16 sm:px-6 sm:py-20 md:px-10 md:py-28 lg:px-14">
         <div className="grid gap-14 lg:grid-cols-[0.7fr_1.3fr] lg:items-end lg:gap-24">
           <div>
             <div className="mb-6 flex items-center gap-3">
               <span className="h-px w-8 bg-[#9b7950]" />
 
-              <span className="text-[9px] uppercase tracking-[0.3em] text-[#8a6b47]">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#8a6b47]">
                 {location.eyebrow}
               </span>
             </div>
@@ -92,7 +92,7 @@ export default function Location() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, amount: 0.15 }}
           transition={{ duration: 1 }}
-          className="group relative min-h-[460px] overflow-hidden md:min-h-[620px]"
+          className="group relative aspect-[4/3] min-h-[340px] overflow-hidden sm:min-h-[440px] md:aspect-[16/10] md:min-h-[620px]"
         >
           <img
             src={location.image}
@@ -102,7 +102,7 @@ export default function Location() {
 
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
 
-          <div className="absolute bottom-7 left-7 right-7 flex flex-col gap-6 md:bottom-9 md:left-9 md:right-9 md:flex-row md:items-end md:justify-between">
+          <div className="absolute bottom-5 left-5 right-5 sm:bottom-7 sm:left-7 sm:right-7 flex flex-col gap-6 md:bottom-9 md:left-9 md:right-9 md:flex-row md:items-end md:justify-between">
             <div className="max-w-xl text-white">
               <div className="text-[8px] uppercase tracking-[0.25em] text-white/50">
                 Arunachal Pradesh
@@ -115,7 +115,7 @@ export default function Location() {
               </h3>
             </div>
 
-            <div className="w-fit border border-white/20 bg-black/20 px-5 py-4 backdrop-blur-sm">
+            <div className="w-fit border border-white/20 bg-black/20 px-4 py-3 backdrop-blur-sm sm:px-5 sm:py-4">
               <div className="text-[8px] uppercase tracking-[0.2em] text-white/45">
                 Elevation
               </div>
@@ -131,7 +131,7 @@ export default function Location() {
       {/* =====================================================
           ARRIVAL INFORMATION
       ====================================================== */}
-      <div className="mx-auto max-w-[1500px] px-6 py-16 md:px-10 md:py-20 lg:px-14">
+      <div className="mx-auto max-w-[1500px] px-5 py-14 sm:px-6 md:px-10 md:py-20 lg:px-14">
         <div className="grid gap-12 lg:grid-cols-[0.65fr_1.35fr]">
           {/* Arrival intro */}
           <div>
@@ -161,7 +161,7 @@ export default function Location() {
 
             <a
               href="#booking"
-              className="mt-7 flex w-fit items-center gap-3 bg-[#171713] px-6 py-4 text-[9px] uppercase tracking-[0.2em] text-[#f3efe7] transition-all duration-300 hover:bg-[#8a6b47]"
+              className="mt-7 flex w-full justify-center sm:w-fit items-center gap-3 bg-[#171713] px-6 py-4 text-[9px] uppercase tracking-[0.2em] text-[#f3efe7] transition-all duration-300 hover:bg-[#8a6b47]"
             >
               Plan your arrival
               <ArrowUpRight size={14} strokeWidth={1.3} />
@@ -177,7 +177,7 @@ export default function Location() {
                 return (
                   <div
                     key={item.label}
-                    className="border-b border-black/10 py-7 sm:border-r sm:px-6 sm:first:pl-0 sm:last:border-r-0"
+                    className="border-b border-black/10 py-6 sm:border-r sm:px-6 sm:py-7 sm:first:pl-0 sm:last:border-r-0"
                   >
                     <div className="flex items-center justify-between">
                       <span className="text-[9px] tracking-[0.2em] text-[#9b7950]">
