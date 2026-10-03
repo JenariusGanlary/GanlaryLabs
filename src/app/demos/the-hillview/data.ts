@@ -4,6 +4,8 @@ export const hillview = {
   location: "Arunachal Pradesh, India",
   category: "Boutique Mountain Retreat",
   tagline: "Stay above the clouds.",
+  heroImage:
+    "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=2600&q=90",
   description:
     "A private mountain retreat surrounded by pine forests, quiet valleys, and the slower rhythm of the hills.",
   address: "Upper Hills, Arunachal Pradesh, India",
