@@ -188,9 +188,9 @@ function DemoCard({
   reverse?: boolean;
 }) {
   return (
-    <div className="group w-[250px] shrink-0 sm:w-[290px] lg:w-[320px]">
-      <div className="relative aspect-[1.28/1] overflow-hidden border border-white/10 bg-[#151513] p-2 shadow-2xl">
-        <div className="relative h-full overflow-hidden">
+    <div className="group w-[360px] shrink-0 sm:w-[480px] lg:w-[560px] xl:w-[620px]">
+      <div className="relative aspect-[1.55/1] overflow-hidden rounded-[14px] border border-white/10 bg-[#151513] p-1.5 shadow-[0_30px_90px_rgba(0,0,0,0.42)] sm:rounded-[16px]">
+        <div className="relative h-full overflow-hidden rounded-[10px] sm:rounded-[11px]">
           <Preview type={card.visual} />
 
           <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-white/5" />
@@ -265,7 +265,7 @@ export default function Demos() {
         </div>
       </div>
 
-      <div className="mt-16 space-y-10 md:mt-20">
+      <div className="mt-16 space-y-14 md:mt-20 md:space-y-16">
         <div className="demo-marquee overflow-visible">
           <div className="demo-marquee-track demo-marquee-left">
             {rowOne.map((card, index) => (
