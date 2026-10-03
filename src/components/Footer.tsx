@@ -3,11 +3,12 @@
 import { ArrowUpRight, ArrowUp } from "lucide-react";
 
 const navigation = [
-  { label: "Studio", href: "#studio" },
+  { label: "About", href: "/about" },
   { label: "Systems", href: "#systems" },
   { label: "Process", href: "#process" },
   { label: "What We Solve", href: "#problems" },
-  { label: "Contact", href: "#contact" },
+  { label: "Contact", href: "/contact" },
+  { label: "Demos", href: "/demos" },
 ];
 
 const capabilities = [
