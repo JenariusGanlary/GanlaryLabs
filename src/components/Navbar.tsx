@@ -14,6 +14,9 @@ const links = [
 
 const PENDING_SCROLL_KEY = "ganlary-pending-scroll";
 
+const navLinkClass =
+  "group relative py-2 text-[11px] leading-none font-medium uppercase tracking-[0.13em] text-[var(--muted)] transition-colors duration-300 hover:text-[var(--foreground)]";
+
 export function BrandMark() {
   return (
     <svg viewBox="0 0 42 42" aria-hidden="true" className="h-9 w-9 shrink-0" fill="none">
@@ -45,6 +48,7 @@ export default function Navbar() {
 
     if (pathname !== "/") {
       window.sessionStorage.setItem(PENDING_SCROLL_KEY, id);
+      window.location.assign("/");
       return;
     }
 
@@ -72,9 +76,6 @@ export default function Navbar() {
     });
   }, [pathname]);
 
-  const sectionClassName =
-    "group relative py-2 text-[11px] leading-none font-medium uppercase tracking-[0.13em] text-[var(--muted)] transition-colors duration-300 hover:text-[var(--foreground)] appearance-none border-0 bg-transparent p-0";
-
   return (
     <header className="relative z-50 border-b border-[var(--border)] bg-[rgba(13,13,12,0.9)] backdrop-blur-xl">
       <div className="site-container relative flex h-[74px] items-center justify-between sm:h-[78px]">
@@ -90,17 +91,13 @@ export default function Navbar() {
                   event.preventDefault();
                   scrollToSection(link.href);
                 }}
-                className={sectionClassName}
+                className={navLinkClass}
               >
                 {link.label}
                 <span className="absolute inset-x-0 bottom-0 mx-auto h-px w-0 bg-[var(--accent)] transition-all duration-300 group-hover:w-full" />
               </Link>
             ) : (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="group relative py-2 text-[11px] leading-none font-medium uppercase tracking-[0.13em] text-[var(--muted)] transition-colors duration-300 hover:text-[var(--foreground)]"
-              >
+              <Link key={link.label} href={link.href} className={navLinkClass}>
                 {link.label}
                 <span className="absolute inset-x-0 bottom-0 mx-auto h-px w-0 bg-[var(--accent)] transition-all duration-300 group-hover:w-full" />
               </Link>
