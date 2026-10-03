@@ -20,7 +20,7 @@ export const navigation = [
 ];
 
 export const heroImage =
-  "https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=2400&q=90";
+  "https://images.unsplash.com/photo-1744487793707-a28fe2071e93?auto=format&fit=crop&fm=jpg&q=90&w=3000";
 
 /* =========================================================
    ROOMS
