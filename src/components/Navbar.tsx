@@ -2,8 +2,8 @@
 
 import { ArrowUpRight, Menu, X } from "lucide-react";
 import Link from "next/link";
-import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const links = [
   { label: "Our Processes", href: "process", type: "section" as const },
@@ -11,6 +11,8 @@ const links = [
   { label: "Demos", href: "demos", type: "section" as const },
   { label: "Contact", href: "/contact", type: "page" as const },
 ];
+
+const PENDING_SCROLL_KEY = "ganlary-pending-scroll";
 
 export function BrandMark() {
   return (
@@ -36,28 +38,42 @@ function Brand() {
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const router = useRouter();
   const pathname = usePathname();
 
   const scrollToSection = (id: string) => {
     setOpen(false);
 
-    if (pathname === "/") {
-      document.getElementById(id)?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
+    if (pathname !== "/") {
+      window.sessionStorage.setItem(PENDING_SCROLL_KEY, id);
       return;
     }
 
-    router.push("/");
-    window.setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }, 150);
+    document.getElementById(id)?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
   };
+
+  useEffect(() => {
+    if (pathname !== "/") return;
+
+    const id = window.sessionStorage.getItem(PENDING_SCROLL_KEY);
+    if (!id) return;
+
+    window.sessionStorage.removeItem(PENDING_SCROLL_KEY);
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        document.getElementById(id)?.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      });
+    });
+  }, [pathname]);
+
+  const sectionClassName =
+    "group relative py-2 text-[11px] leading-none font-medium uppercase tracking-[0.13em] text-[var(--muted)] transition-colors duration-300 hover:text-[var(--foreground)] appearance-none border-0 bg-transparent p-0";
 
   return (
     <header className="relative z-50 border-b border-[var(--border)] bg-[rgba(13,13,12,0.9)] backdrop-blur-xl">
@@ -67,20 +83,23 @@ export default function Navbar() {
         <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-9 lg:flex xl:gap-10">
           {links.map((link) =>
             link.type === "section" ? (
-              <button
+              <Link
                 key={link.label}
-                type="button"
-                onClick={() => scrollToSection(link.href)}
-                className="group relative py-2 text-[11px] font-medium uppercase tracking-[0.13em] text-[var(--muted)] transition-colors duration-300 hover:text-[var(--foreground)]"
+                href="/"
+                onClick={(event) => {
+                  event.preventDefault();
+                  scrollToSection(link.href);
+                }}
+                className={sectionClassName}
               >
                 {link.label}
                 <span className="absolute inset-x-0 bottom-0 mx-auto h-px w-0 bg-[var(--accent)] transition-all duration-300 group-hover:w-full" />
-              </button>
+              </Link>
             ) : (
               <Link
                 key={link.label}
                 href={link.href}
-                className="group relative py-2 text-[11px] font-medium uppercase tracking-[0.13em] text-[var(--muted)] transition-colors duration-300 hover:text-[var(--foreground)]"
+                className="group relative py-2 text-[11px] leading-none font-medium uppercase tracking-[0.13em] text-[var(--muted)] transition-colors duration-300 hover:text-[var(--foreground)]"
               >
                 {link.label}
                 <span className="absolute inset-x-0 bottom-0 mx-auto h-px w-0 bg-[var(--accent)] transition-all duration-300 group-hover:w-full" />
@@ -104,10 +123,13 @@ export default function Navbar() {
           <nav className="site-container flex flex-col py-4">
             {links.map((link, index) =>
               link.type === "section" ? (
-                <button
+                <Link
                   key={link.label}
-                  type="button"
-                  onClick={() => scrollToSection(link.href)}
+                  href="/"
+                  onClick={(event) => {
+                    event.preventDefault();
+                    scrollToSection(link.href);
+                  }}
                   className="flex items-center justify-between border-b border-[var(--border)] py-4 text-left text-xs font-medium uppercase tracking-[0.12em] text-[var(--muted)] transition-colors hover:text-[var(--foreground)]"
                 >
                   <span className="flex items-center gap-3">
@@ -115,7 +137,7 @@ export default function Navbar() {
                     {link.label}
                   </span>
                   <ArrowUpRight size={13} strokeWidth={1.4} />
-                </button>
+                </Link>
               ) : (
                 <Link
                   key={link.label}
