@@ -16,6 +16,9 @@ export default function HotelExperience() {
   return (
     <main className="overflow-x-hidden bg-[#f3efe6] text-[#18221d]">
       <header className="absolute inset-x-0 top-0 z-50 text-white">
+        <a href="/demos" className="fixed left-4 top-4 z-[60] flex items-center gap-2 border border-white/25 bg-black/25 px-3 py-2 text-[8px] font-semibold uppercase tracking-[.16em] text-white backdrop-blur-md transition hover:bg-white hover:text-[#18221d] sm:left-6 sm:top-6" aria-label="Back to demos">
+          <span aria-hidden="true">←</span><span>Back to demos</span>
+        </a>
         <div className="mx-auto flex max-w-[1560px] items-center justify-between px-5 py-5 sm:px-8 lg:px-12 lg:py-7">
           <a href="#top" className="flex items-center gap-3"><span className="flex h-9 w-9 items-center justify-center border border-white/40 text-[9px] font-semibold tracking-[.18em]">TH</span><span className="hidden text-[10px] font-semibold uppercase tracking-[.2em] sm:block">The Hillview</span></a>
           <nav className="hidden items-center gap-7 text-[10px] font-semibold uppercase tracking-[.14em] lg:flex"><a href="#rooms">Rooms</a><a href="#dining">Dining</a><a href="#experiences">Experiences</a><a href="#gallery">Gallery</a><a href="#location">Location</a></nav>
