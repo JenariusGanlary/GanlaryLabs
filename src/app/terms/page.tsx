@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import Link from "next/link";
 
 export const metadata = {
@@ -8,12 +9,9 @@ export const metadata = {
 export default function TermsPage() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
-      <header className="border-b border-[var(--border)]">
-        <div className="site-container flex h-20 items-center justify-between">
-          <Link href="/" className="text-xs font-semibold uppercase tracking-[0.16em]">Ganlary Labs</Link>
-          <Link href="/" className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--muted)]">Back to studio</Link>
-        </div>
-      </header>
+      <Navbar />
+
+
       <article className="site-container max-w-4xl py-20 sm:py-28">
         <div className="technical-label">LEGAL / TERMS</div>
         <h1 className="mt-6 font-editorial text-5xl tracking-[-0.05em] sm:text-7xl">Terms & Conditions.</h1>
