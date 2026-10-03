@@ -124,11 +124,11 @@ export default function Hero() {
 
               <a
                 href="#contact"
-                className="group inline-flex h-14 w-full items-center justify-between gap-5 rounded-full bg-[var(--foreground)] px-7 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--background)] transition-all duration-300 hover:bg-[var(--accent)] hover:text-white hover:shadow-[0_12px_45px_rgba(201,130,91,0.16)]"
+                className="group inline-flex h-14 w-full items-center justify-between gap-5 rounded-full bg-[var(--accent)] px-7 text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--background)] transition-all duration-300 hover:bg-[var(--accent-soft)] hover:text-white hover:shadow-[0_14px_50px_rgba(201,130,91,0.22)]"
               >
                 <span>Start a Project</span>
 
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[var(--background)]/10 transition-transform duration-300 group-hover:translate-x-1">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-black/10 transition-transform duration-300 group-hover:translate-x-1">
                   <ArrowUpRight
                     size={14}
                     strokeWidth={1.6}
