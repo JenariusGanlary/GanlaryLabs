@@ -17,13 +17,13 @@ export default function Dining() {
       {/* =========================
           INTRO
       ========================== */}
-      <div className="mx-auto max-w-[1500px] px-6 py-24 md:px-10 md:py-32 lg:px-14">
+      <div className="mx-auto max-w-[1500px] px-5 py-16 sm:px-6 sm:py-20 md:px-10 md:py-28 lg:px-14">
         <div className="grid gap-14 lg:grid-cols-[0.7fr_1.3fr] lg:items-end lg:gap-24">
           <div>
             <div className="mb-6 flex items-center gap-3">
               <span className="h-px w-8 bg-[#9b7950]" />
 
-              <span className="text-[9px] uppercase tracking-[0.3em] text-[#8a6b47]">
+              <span className="text-[10px] font-semibold uppercase tracking-[0.22em] text-[#8a6b47]">
                 {dining.eyebrow}
               </span>
             </div>
@@ -56,7 +56,7 @@ export default function Dining() {
       <div className="mx-auto max-w-[1500px] px-6 md:px-10 lg:px-14">
         <div className="grid overflow-hidden lg:grid-cols-[1.35fr_0.65fr]">
           {/* Main image */}
-          <div className="relative min-h-[420px] overflow-hidden md:min-h-[580px]">
+          <div className="relative aspect-[4/3] min-h-[340px] overflow-hidden sm:min-h-[420px] md:aspect-auto md:min-h-[580px]">
             <motion.img
               initial={{ scale: 1.04 }}
               whileInView={{ scale: 1 }}
@@ -69,7 +69,7 @@ export default function Dining() {
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/5" />
 
-            <div className="absolute bottom-7 left-7 md:bottom-9 md:left-9">
+            <div className="absolute bottom-5 left-5 sm:bottom-7 sm:left-7 md:bottom-9 md:left-9">
               <div className="text-[8px] uppercase tracking-[0.25em] text-white/55">
                 The Hillview Kitchen
               </div>
@@ -149,7 +149,7 @@ export default function Dining() {
               {dining.hours.map((item) => (
                 <div
                   key={item.label}
-                  className="border-b border-black/10 py-6 sm:border-r sm:px-6 sm:first:pl-0 sm:last:border-r-0"
+                  className="border-b border-black/10 py-5 sm:border-r sm:px-6 sm:py-6 sm:first:pl-0 sm:last:border-r-0"
                 >
                   <div className="flex items-center gap-2 text-[8px] uppercase tracking-[0.2em] text-black/35">
                     <Clock3 size={13} strokeWidth={1.2} />
@@ -171,7 +171,7 @@ export default function Dining() {
 
             <a
               href="#booking"
-              className="mt-8 flex w-fit items-center gap-3 bg-[#171713] px-6 py-4 text-[9px] uppercase tracking-[0.2em] text-[#f3efe7] transition-all duration-300 hover:bg-[#8a6b47]"
+              className="mt-7 flex w-full sm:w-fit items-center gap-3 bg-[#171713] justify-center px-6 py-4 text-[10px] uppercase tracking-[0.2em] text-[#f3efe7] transition-all duration-300 hover:bg-[#8a6b47]"
             >
               Arrange Dining
               <ArrowUpRight size={14} strokeWidth={1.3} />
