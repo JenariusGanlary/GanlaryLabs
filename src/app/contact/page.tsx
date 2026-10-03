@@ -1,72 +1,152 @@
 import Link from "next/link";
-import { ArrowUpRight, Mail } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Mail, MessageSquare, Sparkles } from "lucide-react";
 
 export const metadata = {
   title: "Contact — Ganlary Labs",
   description:
-    "Start a project with Ganlary Labs. Tell us what you are trying to build, improve, automate, or solve.",
+    "Start a project with Ganlary Labs. Tell us what you are building, improving, or automating.",
 };
+
+const brief = [
+  "What your business does",
+  "The problem you want solved",
+  "Who the system is for",
+  "Your target timeline",
+  "What already exists",
+];
 
 export default function ContactPage() {
   return (
-    <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
+    <main className="min-h-screen overflow-hidden bg-[var(--background)] text-[var(--foreground)]">
       <header className="border-b border-[var(--border)]">
-        <div className="site-container flex h-20 items-center justify-between">
+        <div className="site-container flex h-[74px] items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-[var(--border-strong)] bg-[var(--surface)] text-xs font-semibold tracking-[-0.08em]">GL</span>
-            <span className="text-xs font-semibold uppercase tracking-[0.16em]">Ganlary Labs</span>
+            <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-[var(--border-strong)] bg-[var(--surface)] text-[10px] font-semibold">GL</span>
+            <span className="text-[11px] font-semibold uppercase tracking-[0.18em]">Ganlary Labs</span>
           </Link>
-          <Link href="/" className="text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--muted)] hover:text-[var(--foreground)]">Back to studio</Link>
+          <Link href="/" className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--muted)] hover:text-[var(--foreground)]">
+            Back to studio <ArrowRight size={13} />
+          </Link>
         </div>
       </header>
 
-      <section className="site-container py-24 sm:py-32 lg:py-40">
-        <div className="max-w-5xl">
-          <div className="technical-label">CONTACT / START A PROJECT</div>
-          <h1 className="mt-7 font-editorial text-[clamp(4rem,9vw,9rem)] leading-[0.82] tracking-[-0.07em]">
-            Tell us what
-            <br />
-            needs to <span className="italic text-[var(--accent-soft)]">work.</span>
-          </h1>
-          <p className="mt-8 max-w-2xl text-base leading-7 text-[var(--muted)] sm:text-lg">
-            Tell us what you are building, what is not working, or what you
-            want to automate. A short, honest brief is enough to start.
-          </p>
-        </div>
-
-        <div className="mt-16 grid gap-px border border-[var(--border)] bg-[var(--border)] lg:grid-cols-2">
-          <a href="mailto:hello@ganlarylabs.com?subject=Ganlary%20Labs%20Project%20Inquiry" className="group bg-[var(--background)] p-8 sm:p-10">
-            <Mail size={20} strokeWidth={1.2} className="text-[var(--accent)]" />
-            <div className="mt-16 technical-label">EMAIL</div>
-            <div className="mt-3 flex items-center gap-3 font-editorial text-2xl tracking-[-0.03em] sm:text-3xl">
-              hello@ganlarylabs.com
-              <ArrowUpRight size={18} strokeWidth={1.2} className="transition-transform group-hover:-translate-y-1 group-hover:translate-x-1" />
+      <section className="relative border-b border-[var(--border)]">
+        <div className="hero-dot-field" />
+        <div className="site-container relative z-10 py-20 sm:py-28 lg:py-36">
+          <div className="grid gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-end lg:gap-24">
+            <div>
+              <div className="technical-label">CONTACT / START A PROJECT</div>
+              <h1 className="mt-7 max-w-5xl font-editorial text-[clamp(4rem,9vw,9.5rem)] leading-[0.8] tracking-[-0.075em]">
+                Tell us what
+                <br />
+                needs to <span className="italic text-[var(--accent-soft)]">work.</span>
+              </h1>
             </div>
-          </a>
-          <div className="bg-[var(--surface)] p-8 sm:p-10">
-            <div className="technical-label">INCLUDE IF YOU CAN</div>
-            <ul className="mt-7 space-y-4 text-sm text-[var(--muted)]">
-              {[
-                "What the business does",
-                "What you want to build or improve",
-                "Who the system is for",
-                "Your target timeline",
-                "Anything already built",
-              ].map((item) => (
-                <li key={item} className="flex gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[var(--accent)]" />
-                  {item}
-                </li>
-              ))}
-            </ul>
+            <p className="max-w-md text-base leading-7 text-[var(--muted)] sm:text-lg sm:leading-8">
+              No elaborate brief required. Tell us what is happening in the
+              business, what you want to change, and what a useful outcome
+              looks like.
+            </p>
           </div>
         </div>
+      </section>
 
-        <p className="mt-7 max-w-2xl text-xs leading-6 text-[var(--muted-dark)]">
-          Ganlary Labs is an independent development studio. Project scope,
-          timelines, pricing, and technical approach are agreed before work
-          begins.
-        </p>
+      <section className="border-b border-[var(--border)] bg-[var(--surface)]">
+        <div className="site-container grid lg:grid-cols-[1.05fr_0.95fr]">
+          <div className="border-b border-[var(--border)] py-14 sm:py-20 lg:border-b-0 lg:border-r lg:pr-16 lg:py-24">
+            <div className="flex items-center gap-3">
+              <span className="flex h-11 w-11 items-center justify-center rounded-full border border-[var(--border-strong)] bg-[var(--background)]">
+                <Mail size={18} strokeWidth={1.2} className="text-[var(--accent)]" />
+              </span>
+              <div className="technical-label">DIRECT / EMAIL</div>
+            </div>
+
+            <h2 className="mt-10 max-w-2xl font-editorial text-4xl leading-[0.9] tracking-[-0.06em] sm:text-6xl">
+              Start with a
+              <br />
+              <span className="italic text-[var(--accent-soft)]">conversation.</span>
+            </h2>
+
+            <p className="mt-7 max-w-xl text-sm leading-7 text-[var(--muted)] sm:text-base sm:leading-8">
+              Send a short description of the business problem, the product
+              you have in mind, or the workflow that is costing your team too
+              much time.
+            </p>
+
+            <a
+              href="mailto:hello@ganlarylabs.com?subject=Ganlary%20Labs%20Project%20Inquiry"
+              className="group mt-10 flex w-full items-center justify-between rounded-2xl border border-[var(--border-strong)] bg-[var(--background)] p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--accent)] sm:p-6"
+            >
+              <span>
+                <span className="block text-[9px] font-semibold uppercase tracking-[0.18em] text-[var(--muted-dark)]">Project enquiries</span>
+                <span className="mt-2 block text-lg font-medium tracking-[-0.03em] sm:text-xl">hello@ganlarylabs.com</span>
+              </span>
+              <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[var(--accent)] text-[#17130f] transition-transform duration-300 group-hover:translate-x-1">
+                <ArrowUpRight size={16} />
+              </span>
+            </a>
+          </div>
+
+          <div className="py-14 sm:py-20 lg:py-24 lg:pl-16">
+            <div className="technical-label">A GOOD FIRST BRIEF</div>
+            <h2 className="mt-6 text-2xl font-medium tracking-[-0.04em] sm:text-3xl">
+              Give us enough context to think with you.
+            </h2>
+            <div className="mt-9 divide-y divide-[var(--border)] border-y border-[var(--border)]">
+              {brief.map((item, index) => (
+                <div key={item} className="flex items-center gap-5 py-5">
+                  <span className="font-mono text-[9px] text-[var(--accent)]">0{index + 1}</span>
+                  <span className="text-sm text-[var(--muted)]">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="mt-7 text-xs leading-6 text-[var(--muted-dark)]">
+              If you do not know all of these yet, that is fine. The first
+              conversation can help define the problem.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="site-container py-20 sm:py-28">
+        <div className="grid gap-5 md:grid-cols-3">
+          {[
+            [MessageSquare, "01", "Explain the problem", "Start with the business reality, not a list of technologies."],
+            [Sparkles, "02", "Shape the system", "We can work through the product, workflow, AI layer, and experience."],
+            [ArrowUpRight, "03", "Build what matters", "Scope, timeline, and technical approach are agreed before work begins."],
+          ].map(([Icon, number, title, text]) => {
+            const I = Icon as typeof MessageSquare;
+            return (
+              <article key={number as string} className="group rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-strong)] sm:p-8">
+                <div className="flex items-center justify-between">
+                  <I size={18} strokeWidth={1.2} className="text-[var(--accent)]" />
+                  <span className="font-mono text-[9px] text-[var(--muted-dark)]">{number as string}</span>
+                </div>
+                <h3 className="mt-14 text-xl font-medium tracking-[-0.035em]">{title as string}</h3>
+                <p className="mt-3 text-sm leading-7 text-[var(--muted)]">{text as string}</p>
+              </article>
+            );
+          })}
+        </div>
+      </section>
+
+      <section className="site-container pb-20 sm:pb-28">
+        <div className="relative overflow-hidden rounded-[28px] border border-[var(--border-strong)] bg-[var(--surface)] p-7 sm:p-10 lg:p-14">
+          <div className="absolute right-[-8%] top-[-70%] h-[620px] w-[620px] rounded-full bg-[var(--accent)]/[0.09] blur-3xl" />
+          <div className="relative z-10 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <div className="technical-label">GANLARY LABS / INDIA → WORLDWIDE</div>
+              <h2 className="mt-5 max-w-3xl font-editorial text-4xl leading-[0.88] tracking-[-0.06em] sm:text-6xl">
+                Bring us the
+                <br />
+                <span className="italic text-[var(--accent-soft)]">messy problem.</span>
+              </h2>
+            </div>
+            <Link href="/demos" className="inline-flex shrink-0 items-center gap-3 rounded-full border border-[var(--border-strong)] px-5 py-3.5 text-[10px] font-semibold uppercase tracking-[0.14em] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]">
+              See the demos <ArrowUpRight size={14} />
+            </Link>
+          </div>
+        </div>
       </section>
     </main>
   );
