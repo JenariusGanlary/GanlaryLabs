@@ -563,81 +563,40 @@ function DesignCard({ card }: { card: (typeof cards)[number] }) {
   return (
     <Link
       href={card.href}
-      className="group block w-[285px] shrink-0 sm:w-[330px] lg:w-[360px]"
+      className="group block w-[360px] shrink-0 sm:w-[480px] lg:w-[560px] xl:w-[620px]"
     >
       <div
-        className="relative aspect-[1.32/1] overflow-hidden rounded-[20px] border p-1.5 shadow-[0_22px_70px_rgba(0,0,0,0.32)] transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_30px_90px_rgba(0,0,0,0.42)]"
+        className="relative aspect-[1.55/1] overflow-hidden rounded-[14px] border p-1 shadow-[0_30px_90px_rgba(0,0,0,0.42)] transition-all duration-500 group-hover:-translate-y-1 group-hover:shadow-[0_38px_110px_rgba(0,0,0,0.5)] sm:rounded-[16px] sm:p-1.5"
         style={{
           backgroundColor: colors.surface,
-          borderColor: `${colors.accent}55`,
+          borderColor: "rgba(255,255,255,0.14)",
         }}
       >
-        <div
-          className="relative h-full overflow-hidden rounded-[14px] border border-black/10"
-          style={{ color: colors.text }}
-        >
-          <div
-            className="absolute inset-0 opacity-20"
-            style={{ background: colors.media }}
-          />
-
-          <div className="relative z-10 flex h-full flex-col p-3 sm:p-4">
-            <div className="flex items-center justify-between border-b border-current/10 pb-2.5">
-              <span className="text-[6px] font-bold uppercase tracking-[0.2em]">
-                {card.name}
-              </span>
-
-              <span className="text-[5px] font-semibold uppercase tracking-[0.16em] opacity-45">
-                {card.type}
-              </span>
-            </div>
-
-            <div className="min-h-0 flex-1 py-2">
-              <Mockup card={card} />
-            </div>
-
-            <div className="flex items-end justify-between gap-3 border-t border-current/10 pt-2.5">
-              <div className="min-w-0">
-                <div className="text-[13px] font-medium leading-[0.9] tracking-[-0.045em] sm:text-[15px]">
-                  {card.title}{" "}
-                  <span
-                    className="font-serif italic"
-                    style={{ color: colors.accent }}
-                  >
-                    {card.accent}
-                  </span>
-                </div>
-
-                <div className="mt-2 flex gap-1">
-                  <span
-                    className="h-1 w-9 rounded-full"
-                    style={{ backgroundColor: colors.accent }}
-                  />
-                  <span className="h-1 w-5 rounded-full bg-current/15" />
-                  <span className="h-1 w-6 rounded-full bg-current/15" />
-                </div>
-              </div>
-
-              <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-current/15 bg-black/5 backdrop-blur-sm transition-all duration-300 group-hover:border-current/30">
-                <ArrowUpRight size={11} strokeWidth={1.4} />
-              </div>
-            </div>
-          </div>
+        <div className="relative h-full overflow-hidden rounded-[10px] sm:rounded-[11px]">
+          <Mockup card={card} />
+          <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/8 via-transparent to-white/[0.04]" />
+          <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-black/10" />
         </div>
       </div>
 
-      <div className="flex items-center justify-between px-1 pt-3">
+      <div className="flex items-start justify-between gap-5 px-1.5 pt-4 sm:px-2 sm:pt-5">
         <div>
-          <div className="text-[8px] font-semibold uppercase tracking-[0.18em] text-[#c8aa7c]">
-            {card.number} / {card.type}
+          <div className="flex items-center gap-2 text-[8px] font-semibold uppercase tracking-[0.2em] text-[#c8aa7c] sm:text-[9px]">
+            <span>{card.number}</span>
+            <span className="h-px w-5 bg-[#c8aa7c]/35" />
+            <span>{card.type}</span>
           </div>
-          <div className="mt-1 text-[14px] font-medium tracking-[-0.02em] text-white/75">
+
+          <div className="mt-1.5 text-[15px] font-medium tracking-[-0.02em] text-white/80 sm:text-[16px]">
             {card.name}
           </div>
         </div>
 
-        <span className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 text-[8px] font-medium uppercase tracking-[0.14em] text-white/30 backdrop-blur-sm">
+        <span className="mt-0.5 flex items-center gap-2 text-[8px] font-medium uppercase tracking-[0.15em] text-white/25 transition-colors group-hover:text-white/55">
           Concept
+          <span className="flex h-7 w-7 items-center justify-center rounded-full border border-white/10 bg-white/[0.02] transition-all duration-300 group-hover:border-[#c8aa7c]/50 group-hover:bg-[#c8aa7c]/10">
+            <ArrowUpRight size={11} strokeWidth={1.4} />
+          </span>
         </span>
       </div>
     </Link>
