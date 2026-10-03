@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import DemosHero from "@/components/DemosHero";
+import Navbar from "@/components/Navbar";
 
 const demos = [
   {
@@ -19,21 +20,8 @@ const demos = [
 export default function DemosPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#0c0c0b] text-[#f3efe7]">
-      <header className="relative z-30 border-b border-white/10 bg-[#0c0c0b]/90 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-[1500px] items-center justify-between px-5 py-5 sm:px-6 md:px-10 lg:px-14">
-          <Link
-            href="/"
-            className="flex items-center gap-3 text-[10px] font-semibold uppercase tracking-[0.2em] text-white/70 transition-colors hover:text-white"
-          >
-            <ArrowLeft size={14} strokeWidth={1.4} />
-            Ganlary Labs
-          </Link>
+      <Navbar />
 
-          <span className="text-[9px] font-semibold uppercase tracking-[0.25em] text-white/30">
-            Demo Collection
-          </span>
-        </div>
-      </header>
 
       <section className="relative border-b border-white/10 pt-20 sm:pt-24 md:pt-32">
         <div className="mx-auto max-w-[1500px] px-5 sm:px-6 md:px-10 lg:px-14">
