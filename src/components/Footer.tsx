@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowUpRight, ArrowUp, Mail } from "lucide-react";
+import { BrandMark } from "./Navbar";
 
 const navigation = [
   { label: "About", href: "/about" },
@@ -15,7 +16,6 @@ const legal = [
   { label: "Terms & Conditions", href: "/terms" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Cookie Policy", href: "/cookies" },
-  { label: "Affiliate Disclosure", href: "/affiliate-disclosure" },
 ];
 
 const capabilities = [
@@ -48,12 +48,17 @@ export default function Footer() {
         <div className="border-b border-[var(--border)] py-16 sm:py-20 lg:py-24">
           <div className="grid gap-14 lg:grid-cols-[1.15fr_0.85fr] lg:gap-24">
             <div>
-              <a href="/" className="group inline-flex items-center gap-3">
-                <span className="flex h-11 w-11 items-center justify-center rounded-xl border border-[var(--border-strong)] bg-[var(--surface)] text-[10px] font-semibold tracking-[0.08em] transition-all duration-300 group-hover:border-[var(--accent)] group-hover:text-[var(--accent)]">
-                  GL
+              <a href="/" aria-label="Ganlary Labs home" className="group inline-flex items-center gap-3">
+                <span className="flex h-12 w-12 items-center justify-center rounded-2xl border border-[var(--border-strong)] bg-[var(--surface)] text-[var(--foreground)] transition-all duration-300 group-hover:border-[var(--accent)] group-hover:bg-[rgba(201,130,91,0.06)]">
+                  <BrandMark />
                 </span>
-                <span className="text-sm font-semibold tracking-[-0.02em]">
-                  GANLARY LABS
+                <span>
+                  <span className="block text-sm font-semibold uppercase tracking-[0.16em]">
+                    Ganlary
+                  </span>
+                  <span className="mt-1 block text-[8px] font-medium uppercase tracking-[0.28em] text-[var(--muted)]">
+                    Labs
+                  </span>
                 </span>
               </a>
 
