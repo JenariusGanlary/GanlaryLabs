@@ -1,3 +1,4 @@
+import Navbar from "@/components/Navbar";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -53,24 +54,9 @@ const talent = [
 export default function AboutPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-[var(--background)] text-[var(--foreground)]">
-      <header className="border-b border-[var(--border)]">
-        <div className="site-container flex h-[74px] items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-[var(--border-strong)] bg-[var(--surface)] text-[10px] font-semibold tracking-[0.08em]">
-              GL
-            </span>
-            <span className="text-[11px] font-semibold uppercase tracking-[0.18em]">
-              Ganlary Labs
-            </span>
-          </Link>
-          <Link
-            href="/"
-            className="flex items-center gap-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-[var(--muted)] transition-colors hover:text-[var(--foreground)]"
-          >
-            Back to studio <ArrowRight size={13} />
-          </Link>
-        </div>
-      </header>
+      <Navbar />
+
+
 
       <section className="relative border-b border-[var(--border)]">
         <div className="hero-dot-field" />
