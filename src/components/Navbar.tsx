@@ -19,16 +19,16 @@ export default function Navbar() {
         {/* Brand */}
         <a
           href="#"
-          className="group flex items-center gap-3"
+          className="group flex items-center"
           aria-label="Ganlary Labs home"
         >
-          <span className="relative flex h-7 w-7 items-center justify-center rounded-full border border-[rgba(201,130,91,0.42)] bg-[rgba(201,130,91,0.06)] transition-all duration-300 group-hover:border-[var(--accent)] group-hover:bg-[rgba(201,130,91,0.12)]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
-          </span>
-
-          <span className="text-[13px] font-semibold tracking-[0.12em]">
-            GANLARY LABS
-          </span>
+          <div className="flex h-12 items-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.96] px-2 shadow-[0_8px_30px_rgba(0,0,0,0.18)] transition-all duration-300 group-hover:border-[var(--accent)]/30 group-hover:shadow-[0_10px_36px_rgba(201,130,91,0.12)]">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAgAElEQVR4nO2dZ1gV57r37+mrL3qVInbFgkSsG7G3aOwNGwoqsZcY"
+              alt="Ganlary Labs"
+              className="h-10 w-14 object-contain"
+            />
+          </div>
         </a>
 
         {/* Desktop Navigation — intentionally centered */}
